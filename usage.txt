@@ -1,0 +1,18 @@
+Usage: planetae_converter [OPTION]... INPUT [OPTION] OUTPUT
+    or: planetae_converter INPUT OUTPUT
+
+    -i, --input             makes the next parameter to be the INPUT
+    -o, --output            makes the next parameter to be the OUTPUT
+    -c, --csv               selects the next parameter to be in csv format
+    -j, --json              selects the next parameter to be in json format
+    -d, --delimiter, --sep  selects the next parameter to be the delimiter if it is a csv. Defaults to ','
+    -q, --quotechar         selects the next parameter to be the character of quoting. Defaults to '"'
+    -t, --indent            selects the next parameter to be the identation of the json. Defaults to 4 spaces. (If 0 the json is written in one line)
+
+Examples:
+    planetae_converter all.csv all.json
+    planetae_converter -i all.csv -o all.json
+    planetae_converter -i -c all.csv -o -j all.json
+    planetae_converter -i -c all.txt -o -j all.json
+    planetae_converter -i -c all.txt -o -j all.txt
+    planetae_converter -i -c -d ; -q ' all.csv -o -j all.json
